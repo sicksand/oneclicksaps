@@ -1,0 +1,31 @@
+<script type="text/javascript" language="javascript">
+  function disabledform(){
+    document.getElementById("txtNegeri").readOnly = true;
+    document.getElementById("txtSekolah").disabled = true;
+    document.getElementById("txtCariSekolah").disabled = true;
+  }
+  function submitform(flg,url)
+  {
+    if(flg=='analisis')
+      document.form7.action=url;
+    else{
+      document.form7.action=url;		
+    }
+      document.form7.submit();
+  }
+  </script>
+<form id="form7" name="form7" method="post" action="analisasr.php" target="_blank">
+<table width="200" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><input type="button" name="jpep2" id="jpep2" value="Papar Slip Keputusan" onclick="return submitform('jpep','https://sapsnkra.moe.gov.my/ibubapa2/slipsr.php');"/></td>
+  </tr>
+  <tr>
+    <td><input type="button" name="analisis2" id="analisis2" value="Papar Markah Peperiksaan" onclick="return submitform('analisis','https://sapsnkra.moe.gov.my/ibubapa2/analisasr.php');"/></td>
+  </tr>
+</table>
+<input type="hidden" name="nokp" id="nokp" value="">
+<input type="hidden" name="kodsek" id="kodsek" value="">
+<input type="hidden" name="ting" id="ting" value="">
+<input type="hidden" name="kelas" id="kelas" value="">
+<input type="hidden" name="cboPep" id="cboPep" value="">
+</form>
